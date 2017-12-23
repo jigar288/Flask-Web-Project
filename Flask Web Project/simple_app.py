@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<name>')
 def index(name='Jigar'):
-    return "hello from {}".format(name)
+    return render_template("index.html", name=name)
 
 @app.route('/add/<int:num1>/<int:num2>')
 @app.route('/add/<float:num1>/<float:num2>')
